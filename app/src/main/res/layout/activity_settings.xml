@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settingActivityBackground"
+    tools:context="tanvir.notekeepersample.Activity.SettingsActivity">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Security"
+        android:textColor="@color/settingActivityTextColor"
+        android:id="@+id/securityTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_below="@id/securityTV"
+        android:id="@+id/passwordTV"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="Password"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:layout_below="@id/securityTV"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/passwordTV"
+        android:theme="@style/SCBSwitch"
+        android:showText="true"
+        android:splitTrack="true"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/LockSwitch"
+        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:textOff="OFF"
+        android:textOn="On"/>
+
+    <View
+        android:layout_marginTop="7dp"
+        android:id="@+id/vertTicalLine"
+        android:layout_below="@+id/passwordTV"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_below="@id/vertTicalLine"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Backup and restore"
+        android:textColor="@color/settingActivityTextColor"
+        android:id="@+id/backupAndRstoreTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/backupAndRstoreTV"
+        android:id="@+id/backupTV"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="Backup"
+        android:onClick="backupData"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/backupTV"
+        android:id="@+id/restoreTV"
+        android:layout_marginTop="5dp"
+        android:onClick="importData"
+        android:layout_marginLeft="10dp"
+        android:text="Import"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
